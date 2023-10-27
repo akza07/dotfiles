@@ -114,6 +114,7 @@ alias ls="eza -l --icons --group-directories-first"
 export EDITOR=helix
 export VISUAL="$EDITOR"
 export BAT_THEME=Dracula
+export TERM=kitty
 
 alias t="ls -T --git-ignore -L 2"
 
