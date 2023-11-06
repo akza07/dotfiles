@@ -111,6 +111,7 @@ esac
 alias hx="helix"
 alias zconf="hx ~/.zshrc"
 alias ls="eza -l --icons --group-directories-first"
+alias rm="echo \"Use trash instead\""
 export EDITOR=helix
 export VISUAL="$EDITOR"
 export BAT_THEME=Dracula
@@ -148,3 +149,5 @@ n ()
         rm -f "$NNN_TMPFILE" > /dev/null
     }
 }
+
+export PATH="$PATH:$HOME/flutter/bin"
