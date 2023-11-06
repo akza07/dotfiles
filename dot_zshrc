@@ -151,3 +151,10 @@ n ()
 }
 
 export PATH="$PATH:$HOME/flutter/bin"
+
+# bun completions
+[ -s "/home/akza/.bun/_bun" ] && source "/home/akza/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
