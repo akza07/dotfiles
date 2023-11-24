@@ -14,28 +14,6 @@ language-servers = ["pyright-langserver"]
 formatter = { command = "black", args = ["-","--quiet"]}
 auto-format = true
 
-[[language]]
-name = "rust"
-
-[language.config]
-checkOnSave = { command = "clippy" }
-
-[[language]]
-name = "html"
-formatter = { command = 'prettier', args = ["--parser", "html"] }
-
-[[language]]
-name = "json"
-formatter = { command = 'prettier', args = ["--parser", "json"] }
-
-[[language]]
-name = "css"
-formatter = { command = 'prettier', args = ["--parser", "css"] }
-
-[[language]]
-name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
 
 [[language]]
 name = "typescript"
