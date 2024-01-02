@@ -115,7 +115,7 @@ alias rm="echo \"Use trash instead\""
 export EDITOR=helix
 export VISUAL="$EDITOR"
 export BAT_THEME=Dracula
-export TERM=kitty
+export TERM=xterm-kitty
 
 alias t="ls -T --git-ignore -L 2"
 
