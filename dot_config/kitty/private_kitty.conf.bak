@@ -33,8 +33,8 @@ tab_bar_style               powerline
 tab_powerline_style         round
 tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
 
+
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# GitHub Dark
 include current-theme.conf
 # END_KITTY_THEME
-wayland_titlebar_color background
