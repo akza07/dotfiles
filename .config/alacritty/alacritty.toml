@@ -1,0 +1,20 @@
+[general]
+live_config_reload = true
+import = ["~/.config/alacritty/tokyo-night.toml"]
+
+[window]
+padding = {x = 3, y = 3}
+opacity = 0.75
+blur = true
+
+[font]
+normal = { family = "HackNerdFont", style = "Regular"}
+bold = { family = "HackNerdFont", style = "Bold"}
+italic = { family = "HackNerdFont", style = "Italic"}
+bold_italic = { family = "HackNerdFont", style = "Bold Italic"}
+size = 10
+
+builtin_box_drawing = true
+
+[selection]
+save_to_clipboard = true
