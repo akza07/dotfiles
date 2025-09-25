@@ -17,10 +17,6 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /home/akza/.lmstudio/bin
-# End of LM Studio CLI section
-
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH

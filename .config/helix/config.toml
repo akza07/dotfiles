@@ -17,8 +17,8 @@ normal = "block"
 select = "underline"
 
 [editor.indent-guides]
-# render = true
-# character = "|"
+render = true
+character = "|"
 skip-levels = 1
 
 [editor.file-picker]
@@ -26,3 +26,10 @@ hidden = false
 
 [editor.smart-tab]
 enable = false
+
+[keys.normal]
+C-s = ":write"
+A-s = ":sh alacritty -e lazygit"
+[keys.insert]
+j = { k = "normal_mode"}
+
