@@ -29,7 +29,6 @@ enable = false
 
 [keys.normal]
 C-s = ":write"
-A-s = ":sh alacritty -e lazygit"
-[keys.insert]
-j = { k = "normal_mode"}
-
+C-r = ":reload-all"
+A-g = ":sh kitty -e lazygit"
+A-f = ":sh kitty -e spf"
