@@ -45,3 +45,8 @@ language-servers = [ { name = "vscode-json-language-server", except-features = [
 [[language]]
 name = "python"
 auto-format = true
+
+[[language]]
+name = "rust"
+auto-format = true
+formatter = { command = "rustfmt" }
