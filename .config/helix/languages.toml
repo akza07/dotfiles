@@ -50,3 +50,9 @@ auto-format = true
 name = "rust"
 auto-format = true
 formatter = { command = "rustfmt" }
+
+[[language]]
+name = "markdown"
+formatter = { command = "prettier", args = ["--stdin", "--parser", "markdown"] }
+auto-format = true
+
