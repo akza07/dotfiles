@@ -23,6 +23,7 @@ skip-levels = 1
 
 [editor.file-picker]
 hidden = false
+git-ignore = true
 
 [editor.smart-tab]
 enable = false
