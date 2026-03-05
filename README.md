@@ -28,3 +28,20 @@ If you're on KDE Plasma, Go to `System Settings -> Keyboard -> Key Repeat: Enabl
 
 - Delay: 300ms
 - Rate: 45 repeats/s
+
+---
+
+# Hyprland things on Arch + KDE Plasma
+
+## KDE Plasma **Open With...** not working.
+
+```bash
+sudo pacman -S --needed archlinux-xdg-menu
+XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental
+```
+
+Then restart Dolphin
+
+## Password Management
+
+I don't know...
