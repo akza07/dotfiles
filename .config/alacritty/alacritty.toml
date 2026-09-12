@@ -2,9 +2,13 @@
 live_config_reload = true
 import = ["~/.config/alacritty/tokyo-night.toml"]
 
+[terminal]
+osc52 = "CopyPaste"   
+
 [window]
 padding = {x = 3, y = 3}
-opacity = 0.90
+opacity = 0.80
+dynamic_padding = true
 blur = true
 
 [font]
@@ -26,3 +30,6 @@ TERM = "xterm-256color"
 key = "N"
 mods = "Control|Shift"
 action = "SpawnNewInstance"
+
+[colors]
+transparent_background_colors = true

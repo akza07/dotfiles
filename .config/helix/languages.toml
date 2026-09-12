@@ -1,40 +1,48 @@
-
-[[language]]
-name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "tsx"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
-
-[[language]]
-name = "javascript"
-language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
-auto-format = true
-
 # [[language]]
 # name = "typescript"
-# language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+# roots = ["deno.json", "deno.jsonc", "package.json"]
+# file-types = ["ts", "tsx"]
 # auto-format = true
+# language-servers = ["deno-lsp"]
+
+# [[language]]
+# name = "javascript"
+# roots = ["deno.json", "deno.jsonc", "package.json"]
+# file-types = ["js", "jsx"]
+# auto-format = true
+# language-servers = ["deno-lsp"]
+
+# [language-server.deno-lsp]
+# command = "deno"
+# args = ["lsp"]
+# config.deno.enable = true
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+config = { require_configuration = true }
 
 [[language]]
-name = "tsx"
+name = "javascript"
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "%{buffer_name}"] }
 auto-format = true
 language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 
 [[language]]
 name = "jsx"
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "%{buffer_name}"] }
+auto-format = true
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+
+[[language]]
+name = "typescript"
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "%{buffer_name}"] }
+auto-format = true
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
+
+[[language]]
+name = "tsx"
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "%{buffer_name}"] }
 auto-format = true
 language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 
@@ -42,9 +50,17 @@ language-servers = [ { name = "typescript-language-server", except-features = [ 
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 
+# 7. Configure Python
 [[language]]
 name = "python"
 auto-format = true
+
+[language-server.rust-analyzer]
+timeout = 120
+config = { check.command = "clippy" }
+cargo.allFeatures = true
+inlayHints.closureReturnTypeHints.enable = "with_block"
+
 
 [[language]]
 name = "rust"
@@ -56,3 +72,11 @@ name = "markdown"
 formatter = { command = "prettier", args = ["--stdin", "--parser", "markdown"] }
 auto-format = true
 
+
+[language-server.postgres-lsp]
+command = "postgres-language-server"
+args = ["lsp-proxy"]  # This is the specific flag for LSP communication
+
+[[language]]
+name = "sql"
+language-servers = ["postgres-lsp"]
